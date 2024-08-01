@@ -1,0 +1,26 @@
+{
+	"FileVersion" : 3,
+	"Version" : 1,
+	"VersionName" : "1.0.2",
+	"FriendlyName" : "FixIt Note Plugin",
+	"Description" : "Adds notes to locations or objects",
+	"Category" : "Organizational Tool",
+	"CreatedBy" : "Skunkwerks Software Inc.",
+	"CreatedByURL" : "http://skunkwerkskinetic.com/",
+	"DocsURL" : "",
+	"MarketplaceURL" : "com.epicgames.launcher://ue/marketplace/offers/753fba93b8ef4a6a8a1fbcd77f68bfaa",
+	"SupportURL" : "",
+	"EnabledByDefault" : true,
+	"CanContainContent" : true,
+	"IsBetaVersion" : false,
+	"Installed" : true,
+	"RequiresBuildPlatform" : false,
+	"Modules" :
+	[
+		{
+			"Name" : "FixItNotePlugin",
+			"Type" : "EditorNoCommandlet",
+			"LoadingPhase" : "Default"
+		}
+	]
+}

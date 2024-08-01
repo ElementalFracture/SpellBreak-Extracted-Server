@@ -1,0 +1,186 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "g3",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"CoreUObject",
+				"AIModule",
+				"NavigationSystem"
+			]
+		},
+		{
+			"Name": "g3Editor",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ActorSequence",
+			"Enabled": true
+		},
+		{
+			"Name": "UnrealHx",
+			"Enabled": true
+		},
+		{
+			"Name": "GameplayTagsEditor",
+			"Enabled": true
+		},
+		{
+			"Name": "MinimapPlugin",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/ad08325742e24fb0836391bca25c72bb"
+		},
+		{
+			"Name": "PrefabTool",
+			"Enabled": true
+		},
+		{
+			"Name": "MirrorAnimationSystem",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/36b1fe6319794a25ab6dfffb82e1b29b"
+		},
+		{
+			"Name": "ApexDestruction",
+			"Enabled": true
+		},
+		{
+			"Name": "LinuxDeviceProfileSelector",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineFramework",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemSteam",
+			"Enabled": true
+		},
+		{
+			"Name": "FixItNotePlugin",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/offers/753fba93b8ef4a6a8a1fbcd77f68bfaa"
+		},
+		{
+			"Name": "ProxyLODPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "OculusVR",
+			"Enabled": false
+		},
+		{
+			"Name": "SteamVR",
+			"Enabled": false
+		},
+		{
+			"Name": "PlatformCrypto",
+			"Enabled": true
+		},
+		{
+			"Name": "AESHandlerComponent",
+			"Enabled": true
+		},
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "Niagara",
+			"Enabled": true
+		},
+		{
+			"Name": "EditorScriptingUtilities",
+			"Enabled": true
+		},
+		{
+			"Name": "ST_SparseGrid",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/13b592ea80814f2e841cb4efb9861434"
+		},
+		{
+			"Name": "ControlRig",
+			"Enabled": true
+		},
+		{
+			"Name": "LiveLink",
+			"Enabled": true
+		},
+		{
+			"Name": "Wwise",
+			"Enabled": true
+		},
+		{
+			"Name": "UEOS",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemPS4",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"PS4"
+			]
+		},
+		{
+			"Name": "OnlineSubsystemSwitch",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Switch"
+			]
+		},
+		{
+			"Name": "OnlineSubsystemLive",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"XboxOne"
+			]
+		},
+		{
+			"Name": "OnlineSubsystemEOS",
+			"Enabled": true
+		},
+		{
+			"Name": "DisbeliefOnline",
+			"Enabled": true,
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"XboxOne",
+				"PS4",
+				"Android",
+				"Switch"
+			]
+		},
+		{
+			"Name": "MfMedia",
+			"Enabled": true
+		},
+		{
+			"Name": "AnimationBudgetAllocator",
+			"Enabled": true
+		},
+		{
+			"Name": "ProlePatch",
+			"Enabled": false
+		},
+		{
+			"Name": "AwsSdkMini",
+			"Enabled": true
+		}
+	],
+	"TargetPlatforms": [
+		"LinuxNoEditor",
+		"WindowsNoEditor",
+		"XboxOne",
+		"PS4",
+		"Switch",
+		"Android"
+	]
+}

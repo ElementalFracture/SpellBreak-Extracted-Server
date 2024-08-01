@@ -1,0 +1,40 @@
+{
+	"FileVersion" : 3,
+	"Version" : 1,
+	"VersionName" : "1.0",
+	"FriendlyName" : "Disbelief Online",
+	"Description" : "Plugin to handle online edges in Blueprint projects.",
+	"Category" : "Disbelief",
+	"CreatedBy" : "Disbelief",
+	"CreatedByURL" : "http://disbelief.com",
+	"DocsURL" : "",
+	"MarketplaceURL" : "",
+	"SupportURL" : "",
+	"EnabledByDefault" : true,
+	"CanContainContent" : true,
+	"IsBetaVersion" : false,
+	"Installed" : false,
+
+	"SupportedTargetPlatforms": [
+		"Win64",
+		"XboxOne",
+		"PS4",
+		"Android",
+		"Switch"
+	],
+
+	"Modules" : [
+		{
+			"Name" : "DisbeliefOnline",
+			"Type" : "Runtime",
+			"LoadingPhase" : "Default"
+		}
+	],
+	"Plugins":
+	[
+		{
+			"Name": "OnlineSubsystemUtils",
+			"Enabled": true
+		}
+	]
+}

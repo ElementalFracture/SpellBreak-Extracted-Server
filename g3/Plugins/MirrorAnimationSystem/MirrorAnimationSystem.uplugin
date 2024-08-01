@@ -1,0 +1,34 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Mirror Animation System",
+	"Description": "Incorporates functionalities that allow the mirroring of animations with their root motion at runtime, as well as inside the editor.",
+	"Category": "Animation",
+	"CreatedBy": "Theodor Luis Martin Bruna (Hethger)",
+	"CreatedByURL": "https://forums.unrealengine.com/member.php?133197-Hethger",
+	"DocsURL": "https://www.dropbox.com/s/d49mt1lyd1bdken/Mirror%20Animation%20System%20Documentation.pdf?dl=0",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/36b1fe6319794a25ab6dfffb82e1b29b",
+	"SupportURL": "https://forums.unrealengine.com/showthread.php?142528-Mirror-Animation-System-Plugin&p=696177",
+	"EngineVersion": "4.22.0",
+	"CanContainContent": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "MirrorAnimationSystem",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"BlacklistPlatforms": [
+				"IOS"
+			]
+		},
+		{
+			"Name": "MirrorAnimationSystemEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"BlacklistPlatforms": [
+				"IOS"
+			]
+		}
+	]
+}

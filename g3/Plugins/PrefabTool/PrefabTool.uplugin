@@ -1,0 +1,42 @@
+{
+	"FileVersion": 3,
+	"Version": 14,
+	"VersionName": "1.1.0",
+	"FriendlyName": "Prefab Tool",
+	"Description": "Prefab Tool for Unreal Engine 4.",
+	"Category": "Editor",
+	"CreatedBy": "marynate",
+	"CreatedByURL": "https://marynate.itch.io/",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EngineVersion": "4.22.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "PrefabAsset",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Win32",
+				"XboxOne",
+				"Mac",
+				"Android",
+				"Linux",
+				"PS4",
+				"Switch"
+			]
+		},
+		{
+			"Name": "PrefabAssetEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Mac"
+			]
+		}
+	]
+}

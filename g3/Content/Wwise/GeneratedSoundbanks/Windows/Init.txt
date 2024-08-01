@@ -1,0 +1,62 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	2857502249	capture_music			\Default Work Unit\capture_music	
+	3268619333	ambush_music			\Default Work Unit\ambush_music	
+
+State	ID	Name	State Group			Notes
+	0	None	capture_music			
+	1125500713	intro	capture_music			
+	1593864692	defeat	capture_music			
+	2540243936	finale	capture_music			
+	2716678721	victory	capture_music			
+	0	None	ambush_music			
+	788884573	stop	ambush_music			
+	1281810935	start	ambush_music			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	122679011	hit_sidechane			\Default Work Unit\effects\hit_sidechane	
+	299679568	UI_Control_SFX_Gameplay			\Default Work Unit\UI_Control\UI_Control_SFX_Gameplay	
+	755027883	UI_Control_SFX_UI_game			\Default Work Unit\UI_Control\UI_Control_SFX_UI_game	
+	853453841	UI_Control_SFX			\Default Work Unit\UI_Control\UI_Control_SFX	
+	966261518	downed			\Default Work Unit\effects\downed	
+	1076440116	UI_Control_SFX_Ambient			\Default Work Unit\UI_Control\UI_Control_SFX_Ambient	
+	1468180744	auro_on_off			\Default Work Unit\UI_Control\auro_on_off	
+	2076699750	UI_Control_MASTER			\Default Work Unit\UI_Control\UI_Control_MASTER	
+	2180418117	UI_Control_MUSIC			\Default Work Unit\UI_Control\UI_Control_MUSIC	
+	3130671225	UI_Control_VO			\Default Work Unit\UI_Control\UI_Control_VO	
+	3147666038	gameplay_storm_inside_outside			\Default Work Unit\Gameplay\gameplay_storm_inside_outside	
+	3721851788	wolfsblood			\Default Work Unit\effects\wolfsblood	
+	4235509159	UI_Control_SFX_UI_menus			\Default Work Unit\UI_Control\UI_Control_SFX_UI_menus	
+	4258276040	invisibility			\Default Work Unit\effects\invisibility	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	77978275	ambient			\Default Work Unit\Master Audio Bus\AURO\SFX\gameplay\gameplay_sub\sfx_can_get_post_proc\ambient	
+	89505537	gameplay			\Default Work Unit\Master Audio Bus\AURO\SFX\gameplay	
+	393239870	SFX			\Default Work Unit\Master Audio Bus\AURO\SFX	
+	649099900	ui_game			\Default Work Unit\Master Audio Bus\UI\ui_game	
+	913432784	Impact_bus			\Default Work Unit\Master Audio Bus\AURO\SFX\gameplay\Impact_bus	
+	1534528548	VO			\Default Work Unit\Master Audio Bus\AURO\VO	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
+	1950372066	ui_menus			\Default Work Unit\Master Audio Bus\UI\ui_menus	
+	2135054792	sfx_can_get_post_proc			\Default Work Unit\Master Audio Bus\AURO\SFX\gameplay\gameplay_sub\sfx_can_get_post_proc	
+	2875063817	sfx_bypass			\Default Work Unit\Master Audio Bus\AURO\SFX\gameplay\gameplay_sub\sfx_bypass	
+	3082454242	gameplay_sub			\Default Work Unit\Master Audio Bus\AURO\SFX\gameplay\gameplay_sub	
+	3224618006	Emotes			\Default Work Unit\Master Audio Bus\AURO\SFX\Emotes	
+	3536273778	AURO			\Default Work Unit\Master Audio Bus\AURO	
+	3545700988	Reverbs			\Default Work Unit\Master Audio Bus\AURO\Reverbs	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	MUSIC			\Default Work Unit\Master Audio Bus\MUSIC	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	3801544339	verb_general			\Default Work Unit\Master Audio Bus\AURO\Reverbs\verb_general	
+
+Effect plug-ins	ID	Name	Type				Notes
+	411875584	Wwise_Delay_(Custom)	Wwise Delay			
+	589971550	Wwise_Meter_(Custom)	Wwise Meter			
+	2171127646	Hall_Conversation	Wwise RoomVerb			
+	2258521792	Brick_Wall_Minus_1dB_Peak_Slow_Release	Wwise Peak Limiter			
+	3043085106	High_Impact	Wwise Compressor			
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

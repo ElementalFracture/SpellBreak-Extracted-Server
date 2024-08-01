@@ -1,0 +1,19 @@
+{
+    "FileVersion" : 3,
+    "FriendlyName" : "AwsSdkMini",
+    "Version" : 1.9,
+    "VersionName": "1.9.23",
+    "Description" : "This is a compiled version of the AWS C++ SDK with only what we need compiled. This is currently only GameLift",
+    "Category" : "Api",
+    "CreatedBy" : "Proletariat Inc",
+    "CreatedByURL" : "https://proletariat.com",
+
+    "Modules" :
+    [
+        {
+            "Name" : "AwsSdkMini",
+            "Type" : "RuntimeNoCommandlet",
+            "LoadingPhase" : "Default"
+        }
+    ]
+}

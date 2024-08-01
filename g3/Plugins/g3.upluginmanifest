@@ -1,0 +1,2722 @@
+{
+	"Contents": [
+		{
+			"File": "../../../Engine/Plugins/MovieScene/ActorSequence/ActorSequence.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "0.1",
+				"FriendlyName": "Actor Sequence (Experimental)",
+				"Description": "Runtime for embedded actor sequences",
+				"Category": "Editor",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "ActorSequence",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "ActorSequenceEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../g3/Plugins/UnrealHx/UnrealHx.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "alpha",
+				"FriendlyName": "Unreal.hx - UE4 Haxe Integration",
+				"Description": "Write UE4 game logic in Haxe.",
+				"Category": "Scripting",
+				"CreatedBy": "Proletariat Inc.",
+				"CreatedByURL": "http://proletariat.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"PreBuildSteps": 
+				{
+					"Win64": [
+						"SET ProjectDir=$(ProjectDir)",
+						"SET PluginDir=$(PluginDir)",
+						"IF EXIST \"$(ProjectDir)\"\\uhxenv.bat CALL \"$(ProjectDir)\"\\uhxenv.bat",
+						"haxe --cwd \"$(PluginDir)/Haxe/BuildTool\" compile-project.hxml -D \"EngineDir=$(EngineDir)\" -D \"ProjectDir=$(ProjectDir)\" -D \"TargetName=$(TargetName)\" -D \"TargetPlatform=$(TargetPlatform)\" -D \"TargetConfiguration=$(TargetConfiguration)\" -D \"TargetType=$(TargetType)\" -D \"ProjectFile=$(ProjectFile)\" -D \"PluginDir=$(PluginDir)\" -D UE_PRE_BUILD -D CustomPaths"
+					],
+					"Mac": [
+						"export ProjectDir=\"$(ProjectDir)\"",
+						"export PluginDir=\"$(PluginDir)\"",
+						"[ -f \"$(ProjectDir)\"/uhxenv.sh ] && source \"$(ProjectDir)\"/uhxenv.sh",
+						"haxe --cwd \"$(PluginDir)/Haxe/BuildTool\" compile-project.hxml -D \"EngineDir=$(EngineDir)\" -D \"ProjectDir=$(ProjectDir)\" -D \"TargetName=$(TargetName)\" -D \"TargetPlatform=$(TargetPlatform)\" -D \"TargetConfiguration=$(TargetConfiguration)\" -D \"TargetType=$(TargetType)\" -D \"ProjectFile=$(ProjectFile)\" -D \"PluginDir=$(PluginDir)\" -D UE_PRE_BUILD -D CustomPaths"
+					],
+					"Linux": [
+						"export ProjectDir=\"$(ProjectDir)\"",
+						"export PluginDir=\"$(PluginDir)\"",
+						"[ -f \"$(ProjectDir)\"/uhxenv.sh ] && source \"$(ProjectDir)\"/uhxenv.sh",
+						"haxe --cwd \"$(PluginDir)/Haxe/BuildTool\" compile-project.hxml -D \"EngineDir=$(EngineDir)\" -D \"ProjectDir=$(ProjectDir)\" -D \"TargetName=$(TargetName)\" -D \"TargetPlatform=$(TargetPlatform)\" -D \"TargetConfiguration=$(TargetConfiguration)\" -D \"TargetType=$(TargetType)\" -D \"ProjectFile=$(ProjectFile)\" -D \"PluginDir=$(PluginDir)\" -D UE_PRE_BUILD -D CustomPaths"
+					]
+				}
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Editor/GameplayTagsEditor/GameplayTagsEditor.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "GameplayTagsEditor",
+				"Description": "GameplayTagsEditor provides blueprint nodes and editor UI to enable the use of GameplayTags for tagging assets and objects",
+				"Category": "Editor",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "GameplayTagsEditor",
+						"Type": "Developer",
+						"LoadingPhase": "PreDefault"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../g3/Plugins/MinimapPlugin/MinimapPlugin.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 2,
+				"VersionName": "1.2",
+				"FriendlyName": "Journeyman's Minimap",
+				"Description": "A flexible, optimized minimap and fog of war system. Add a stylish borderless or bordered minimap to your game and hook up your own gameplay driven animations. Enable fog of war for limited vision. All features are multiplayer ready.",
+				"Category": "Minimap",
+				"CreatedBy": "Zhi Kang Shao",
+				"CreatedByURL": "http://www.zkshao.com",
+				"DocsURL": "http://www.zkshao.com/downloads/JournMinimapUserGuide.pdf",
+				"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/ad08325742e24fb0836391bca25c72bb",
+				"SupportURL": "https://forums.unrealengine.com/showthread.php?138793",
+				"EngineVersion": "4.22.0",
+				"CanContainContent": true,
+				"Installed": true,
+				"Modules": [
+					{
+						"Name": "MinimapPlugin",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Win32",
+							"Mac"
+						],
+						"AdditionalDependencies": [
+							"Engine"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../g3/Plugins/PrefabTool/PrefabTool.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 14,
+				"VersionName": "1.1.0",
+				"FriendlyName": "Prefab Tool",
+				"Description": "Prefab Tool for Unreal Engine 4.",
+				"Category": "Editor",
+				"CreatedBy": "marynate",
+				"CreatedByURL": "https://marynate.itch.io/",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EngineVersion": "4.22.0",
+				"CanContainContent": true,
+				"Installed": true,
+				"Modules": [
+					{
+						"Name": "PrefabAsset",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Win32",
+							"XboxOne",
+							"Mac",
+							"Android",
+							"Linux",
+							"PS4",
+							"Switch"
+						]
+					},
+					{
+						"Name": "PrefabAssetEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Mac"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../g3/Plugins/MirrorAnimationSystem/MirrorAnimationSystem.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Mirror Animation System",
+				"Description": "Incorporates functionalities that allow the mirroring of animations with their root motion at runtime, as well as inside the editor.",
+				"Category": "Animation",
+				"CreatedBy": "Theodor Luis Martin Bruna (Hethger)",
+				"CreatedByURL": "https://forums.unrealengine.com/member.php?133197-Hethger",
+				"DocsURL": "https://www.dropbox.com/s/d49mt1lyd1bdken/Mirror%20Animation%20System%20Documentation.pdf?dl=0",
+				"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/36b1fe6319794a25ab6dfffb82e1b29b",
+				"SupportURL": "https://forums.unrealengine.com/showthread.php?142528-Mirror-Animation-System-Plugin&p=696177",
+				"EngineVersion": "4.22.0",
+				"CanContainContent": false,
+				"Installed": true,
+				"Modules": [
+					{
+						"Name": "MirrorAnimationSystem",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"BlacklistPlatforms": [
+							"IOS"
+						]
+					},
+					{
+						"Name": "MirrorAnimationSystemEditor",
+						"Type": "Editor",
+						"LoadingPhase": "Default",
+						"BlacklistPlatforms": [
+							"IOS"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/ApexDestruction/ApexDestruction.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Apex Destruction",
+				"Description": "APEX implementation of destruction",
+				"Category": "Physics",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "ApexDestruction",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "ApexDestructionEditor",
+						"Type": "Developer",
+						"LoadingPhase": "PreDefault"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/LinuxDeviceProfileSelector/LinuxDeviceProfileSelector.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Linux Device Profile Selector",
+				"Description": "Linux Device Profile Selector",
+				"Category": "Device Profile Selectors",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "LinuxDeviceProfileSelector",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "PostConfigInit",
+						"WhitelistPlatforms": [
+							"Linux"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Online/OnlineFramework/OnlineFramework.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 2,
+				"VersionName": "1.0",
+				"FriendlyName": "Online Framework Plugin",
+				"Description": "Shared code for interacting with online gameplay services.",
+				"Category": "Online Platform",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "Qos",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"BlacklistPlatforms": [
+							"HTML5"
+						]
+					},
+					{
+						"Name": "Party",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "Lobby",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "Hotfix",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "Rejoin",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "PlayTimeLimit",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "LoginFlow",
+						"Type": "ClientOnly",
+						"LoadingPhase": "Default"
+					}
+				],
+				"LocalizationTargets": [
+					{
+						"Name": "OnlineFramework",
+						"LoadingPolicy": "Always"
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "OnlineSubsystem",
+						"Enabled": true
+					},
+					{
+						"Name": "OnlineSubsystemUtils",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Online/OnlineSubsystem/OnlineSubsystem.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Online Subsystem",
+				"Description": "Shared code for interacting online subsystem implementations.",
+				"Category": "Online Platform",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "OnlineSubsystem",
+						"Type": "Runtime",
+						"LoadingPhase": "PostConfigInit"
+					}
+				],
+				"LocalizationTargets": [
+					{
+						"Name": "OnlineSubsystem",
+						"LoadingPolicy": "Always"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Online/OnlineSubsystemUtils/OnlineSubsystemUtils.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Online Subsystem Utils",
+				"Description": "Shared code for interacting online subsystem implementations.",
+				"Category": "Online Platform",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "OnlineSubsystemUtils",
+						"Type": "Runtime",
+						"LoadingPhase": "PostConfigInit"
+					},
+					{
+						"Name": "OnlineBlueprintSupport",
+						"Type": "Developer",
+						"LoadingPhase": "PostConfigInit"
+					}
+				],
+				"LocalizationTargets": [
+					{
+						"Name": "OnlineSubsystemUtils",
+						"LoadingPolicy": "Always"
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "OnlineSubsystem",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Online/OnlineSubsystemSteam/OnlineSubsystemSteam.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Online Subsystem Steam",
+				"Description": "Access to Steam platform",
+				"Category": "Online Platform",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "OnlineSubsystemSteam",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Win32",
+							"Win64",
+							"Mac",
+							"Linux"
+						]
+					}
+				],
+				"LocalizationTargets": [
+					{
+						"Name": "OnlineSubsystemSteam",
+						"LoadingPolicy": "Always"
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "OnlineSubsystem",
+						"Enabled": true
+					},
+					{
+						"Name": "OnlineSubsystemUtils",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../g3/Plugins/FixItNotePlugin/FixItNotePlugin.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0.2",
+				"FriendlyName": "FixIt Note Plugin",
+				"Description": "Adds notes to locations or objects",
+				"Category": "Organizational Tool",
+				"CreatedBy": "Skunkwerks Software Inc.",
+				"CreatedByURL": "http://skunkwerkskinetic.com/",
+				"DocsURL": "",
+				"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/offers/753fba93b8ef4a6a8a1fbcd77f68bfaa",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": true,
+				"Installed": true,
+				"Modules": [
+					{
+						"Name": "FixItNotePlugin",
+						"Type": "EditorNoCommandlet",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Experimental/ProxyLODPlugin/ProxyLODPlugin.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "0.1",
+				"FriendlyName": "Proxy LOD Plugin (Experimental)",
+				"Description": "A plugin to generate Proxy LOD systems.",
+				"Category": "Editor",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "ProxyLODMeshReduction",
+						"Type": "Editor",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Win64"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Experimental/PlatformCrypto/PlatformCrypto.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Platform Cryptography Plugin",
+				"Description": "Exposes a unified API for cryptography functionality provided by the platform, if available. Otherwise, interfaces with OpenSSL.",
+				"Category": "Misc",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "PlatformCrypto",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Android",
+							"IOS",
+							"Mac",
+							"Win32",
+							"Win64",
+							"Linux",
+							"PS4",
+							"XboxOne",
+							"Switch"
+						],
+						"BlacklistPlatforms": [
+							"TVOS"
+						]
+					},
+					{
+						"Name": "PlatformCryptoOpenSSL",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Android",
+							"IOS",
+							"Mac",
+							"Win32",
+							"Win64",
+							"Linux",
+							"PS4"
+						],
+						"BlacklistPlatforms": [
+							"TVOS"
+						]
+					},
+					{
+						"Name": "PlatformCryptoBCrypt",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"XboxOne"
+						],
+						"BlacklistPlatforms": [
+							"Android",
+							"IOS",
+							"TVOS"
+						]
+					},
+					{
+						"Name": "PlatformCryptoSwitch",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Switch"
+						],
+						"BlacklistPlatforms": [
+							"Android",
+							"IOS",
+							"TVOS"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/PacketHandlers/AESHandlerComponent/AESHandlerComponent.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "AES network packet handler",
+				"Description": "Provides a packet handler component to do AES encryption and decryption.",
+				"Category": "Misc",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "AESHandlerComponent",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Android",
+							"IOS",
+							"Mac",
+							"Win32",
+							"Win64",
+							"Linux",
+							"PS4",
+							"XboxOne",
+							"Switch"
+						]
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "PlatformCrypto",
+						"Enabled": true,
+						"WhitelistPlatforms": [
+							"Android",
+							"IOS",
+							"Mac",
+							"Win32",
+							"Win64",
+							"Linux",
+							"PS4",
+							"XboxOne",
+							"Switch"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Experimental/PythonScriptPlugin/PythonScriptPlugin.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Python Editor Script Plugin",
+				"Description": "Python integration for the UE4 editor.",
+				"Category": "Scripting",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "https://docs.unrealengine.com/en-us/Studio/Python",
+				"MarketplaceURL": "",
+				"SupportURL": "https://forums.unrealengine.com/",
+				"EnabledByDefault": false,
+				"CanContainContent": true,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "PythonScriptPluginPreload",
+						"Type": "Editor",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "PythonScriptPlugin",
+						"Type": "Editor",
+						"LoadingPhase": "PreDefault"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/FX/Niagara/Niagara.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Niagara",
+				"Description": "Niagara effect systems.",
+				"Category": "FX",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": true,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "NiagaraCore",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "Niagara",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "NiagaraShader",
+						"Type": "Runtime",
+						"LoadingPhase": "PostConfigInit"
+					},
+					{
+						"Name": "NiagaraVertexFactories",
+						"Type": "Runtime",
+						"LoadingPhase": "PostConfigInit"
+					},
+					{
+						"Name": "NiagaraEditor",
+						"Type": "Editor",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "NiagaraEditorWidgets",
+						"Type": "Editor",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Editor/EditorScriptingUtilities/EditorScriptingUtilities.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Editor Scripting Utilities",
+				"Description": "Helper functions to script your own UE4 editor functionalities with Blueprint or other scripting tools.",
+				"Category": "Scripting",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "EditorScriptingUtilities",
+						"Type": "Editor",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../g3/Plugins/ST_SparseGrid/ST_SparseGrid.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 5,
+				"VersionName": "2.1",
+				"FriendlyName": "Sparse Grid",
+				"Description": "A high-performance spatial sorting system, allowing for extremely fast world-space queries for objects.",
+				"Category": "Stormtide",
+				"CreatedBy": "Stormtide Ltd.",
+				"CreatedByURL": "https://www.stormtide.co.uk",
+				"DocsURL": "https://drive.google.com/open?id=1RcE0R2iyXhSY2f4-Z_Idok3JhGyOf8pm",
+				"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/13b592ea80814f2e841cb4efb9861434",
+				"SupportURL": "support@stormtide.co.uk",
+				"EngineVersion": "4.22.0",
+				"CanContainContent": true,
+				"Installed": true,
+				"Modules": [
+					{
+						"Name": "ST_SparseGrid",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Win32",
+							"Mac",
+							"Linux",
+							"IOS",
+							"Android",
+							"PS4",
+							"XboxOne",
+							"Switch"
+						]
+					},
+					{
+						"Name": "ST_SparseGridEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Win32",
+							"Mac",
+							"Linux"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Experimental/ControlRig/ControlRig.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Control Rig",
+				"Description": "Framework for animation driven by user controls.",
+				"Category": "Animation",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": true,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "ControlRig",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "ControlRigDeveloper",
+						"Type": "Developer",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "ControlRigEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Animation/LiveLink/LiveLink.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "0.1",
+				"FriendlyName": "Live Link",
+				"Description": "Allows streaming of animation data into the editor",
+				"Category": "Animation",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "LiveLink",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "LiveLinkEditor",
+						"Type": "Developer",
+						"LoadingPhase": "PreDefault"
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "Takes",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/VirtualProduction/Takes/Takes.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Take Recorder",
+				"Description": "A suite of tools and interfaces designed for recording, reviewing and playing back takes in a virtual production environment.",
+				"Category": "Virtual Production",
+				"CreatedBy": "Epic Games Inc.",
+				"CreatedByURL": "",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"CanContainContent": true,
+				"Modules": [
+					{
+						"Name": "TakesCore",
+						"Type": "Developer",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "TakeTrackRecorders",
+						"Type": "Developer",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "TakeRecorderSources",
+						"Type": "Developer",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "TakeRecorder",
+						"Type": "Developer",
+						"LoadingPhase": "PostEngineInit"
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "LevelSequenceEditor",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/MovieScene/LevelSequenceEditor/LevelSequenceEditor.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Level Sequence Editor",
+				"Description": "Content Editor for LevelSequence Assets.",
+				"Category": "Editor",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "LevelSequenceEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../g3/Plugins/Wwise/Wwise.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 201911336,
+				"VersionName": "2019.1.1.6977.1336",
+				"FriendlyName": "Wwise Unreal Engine 4 Integration",
+				"Description": "Wwise integration for Unreal Engine 4",
+				"Category": "Audio",
+				"CreatedBy": "Audiokinetic, Inc.",
+				"CreatedByURL": "http://audiokinetic.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EngineVersion": "4.22.0",
+				"EnabledByDefault": true,
+				"CanContainContent": true,
+				"Modules": [
+					{
+						"Name": "AkAudio",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "AudiokineticTools",
+						"Type": "Editor",
+						"LoadingPhase": "Default"
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "MatineeToLevelSequence",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/MovieScene/MatineeToLevelSequence/MatineeToLevelSequence.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Matinee to Level Sequence",
+				"Description": "Convert Matinee to LevelSequence Asset.",
+				"Category": "Editor",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "MatineeToLevelSequence",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../g3/Plugins/OnlineSubsystemEOS/OnlineSubsystemEOS.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Online Subsystem EOS",
+				"Description": "Online Subsystem for Epic Online Services",
+				"Category": "Online Platform",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://dev.epicgames.com/services",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "OnlineSubsystemEOS",
+						"Type": "Runtime",
+						"LoadingPhase": "PostConfigInit",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Win32",
+							"Mac"
+						]
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "OnlineSubsystem",
+						"Enabled": true
+					},
+					{
+						"Name": "OnlineSubsystemUtils",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/DisbeliefOnline/DisbeliefOnline.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Disbelief Online",
+				"Description": "Plugin to handle online edges in Blueprint projects.",
+				"Category": "Disbelief",
+				"CreatedBy": "Disbelief",
+				"CreatedByURL": "http://disbelief.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": true,
+				"SupportedTargetPlatforms": [
+					"Win64",
+					"XboxOne",
+					"PS4",
+					"Android",
+					"Switch"
+				],
+				"Modules": [
+					{
+						"Name": "DisbeliefOnline",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "OnlineSubsystemUtils",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Media/MfMedia/MfMedia.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Media Foundation Media Player",
+				"Description": "Implements a media player using the Microsoft Media Foundation framework. Requires Xbox One or Windows 7 and higher.",
+				"Category": "Media Players",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "https://forums.unrealengine.com/showthread.php?46879-Media-Framework-Documentation-for-4-5-Preview",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "MfMedia",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "PreLoadingScreen",
+						"WhitelistPlatforms": [
+							"XboxOne"
+						]
+					},
+					{
+						"Name": "MfMediaEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "MfMediaFactory",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "MfMediaFactory",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "PostEngineInit",
+						"WhitelistPlatforms": [
+							"XboxOne"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/AnimationBudgetAllocator/AnimationBudgetAllocator.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Animation Budget Allocator",
+				"Description": "Constrains the time taken for animation to run by dynamically throttling skeletal mesh component ticking.",
+				"Category": "Programming",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "AnimationBudgetAllocator",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../g3/Plugins/AwsSdkMini/AwsSdkMini.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 0,
+				"VersionName": "1.9.23",
+				"FriendlyName": "AwsSdkMini",
+				"Description": "This is a compiled version of the AWS C++ SDK with only what we need compiled. This is currently only GameLift",
+				"Category": "Api",
+				"CreatedBy": "Proletariat Inc",
+				"CreatedByURL": "https://proletariat.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "AwsSdkMini",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../g3/Plugins/ImpostorBaker/ImpostorBaker.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "ImpostorBaker",
+				"Description": "Generates a variety of Impostors for use as distant mesh LODs.",
+				"Category": "Other",
+				"CreatedBy": "Ryan Brucks",
+				"CreatedByURL": "",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"CanContainContent": true,
+				"Plugins": [
+					{
+						"Name": "BlueprintMaterialTextureNodes",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Editor/BlueprintMaterialTextureNodes/BlueprintMaterialTextureNodes.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Blueprint Material and Texture Nodes",
+				"Description": "Adds blueprint editor-only nodes for reading textures and render targets as well as creating and modifiying Material Instance Constants",
+				"Category": "Blueprints",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"CanContainContent": true,
+				"Modules": [
+					{
+						"Name": "BlueprintMaterialTextureNodes",
+						"Type": "Developer",
+						"LoadingPhase": "PreLoadingScreen"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../g3/Plugins/ProletariatOnline/ProletariatOnline.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "ProletariatOnline",
+				"Description": "Plugin providing common online functionality, like authentication with an application server.",
+				"Category": "Other",
+				"CreatedBy": "Proletariat Inc.",
+				"CreatedByURL": "https://www.proletariat.com/",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "ProletariatOnline",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "OnlineSubsystemUtils",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/2D/Paper2D/Paper2D.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Paper2D",
+				"Description": "Paper2D adds tools and assets to help create 2D games including animated sprite assets, tilesets (experimental), 2D level editing tools, and more.",
+				"Category": "2D",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": true,
+				"Modules": [
+					{
+						"Name": "Paper2D",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "Paper2DEditor",
+						"Type": "Editor",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "PaperSpriteSheetImporter",
+						"Type": "Editor",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "PaperTiledImporter",
+						"Type": "Editor",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "SmartSnapping",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/AI/AISupport/AISupport.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "AISupport",
+				"Description": "A simple plugin that makes sure your project loads AIModule and NavigationSystem at runtime",
+				"Category": "AI",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "AISupportModule",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Blendables/LightPropagationVolume/LightPropagationVolume.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "LightPropagationVolume",
+				"Description": "The plugin encapsulates a small part of the LightPropagationVolume feature, the LightPropagationVolumeBlendable asset (for more info: look for Blendables in the documentation). This plugin is also an example on how to make a Blendable asset outside of the engine",
+				"Category": "Rendering",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "LightPropagationVolumeRuntime",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "LightPropagationVolumeEditor",
+						"Type": "Editor",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Developer/AnimationSharing/AnimationSharing.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Animation Sharing",
+				"Description": "Plugin to create Shared Animation systems using the Master-Child pose functionality",
+				"Category": "Programming",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": true,
+				"Modules": [
+					{
+						"Name": "AnimationSharing",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "AnimationSharingEd",
+						"Type": "Editor",
+						"LoadingPhase": "Default"
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "SignificanceManager",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/SignificanceManager/SignificanceManager.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Significance Manager",
+				"Description": "The significance manager plugin provides an extensible framework for allowing games to calculate the significance of an object and change behavior in response.",
+				"Category": "Programming",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "SignificanceManager",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Editor/AssetManagerEditor/AssetManagerEditor.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Asset Manager Editor",
+				"Description": "Editor UI and utilities for managing and auditing Assets on disk",
+				"Category": "Editor",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "AssetManagerEditor",
+						"Type": "Developer",
+						"LoadingPhase": "PreDefault"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Editor/CryptoKeys/CryptoKeys.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "CryptoKeys",
+				"Description": "",
+				"Category": "Other",
+				"CreatedBy": "",
+				"CreatedByURL": "",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": true,
+				"Modules": [
+					{
+						"Name": "CryptoKeys",
+						"Type": "Developer",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Mac",
+							"Win64",
+							"Linux"
+						]
+					},
+					{
+						"Name": "CryptoKeysOpenSSL",
+						"Type": "Developer",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Mac",
+							"Win64",
+							"Linux"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Editor/FacialAnimation/FacialAnimation.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Facial Animation Bulk Importer",
+				"Description": "Bulk importer for facial animation curves and audio. Imports facial animation curve tables (from FBX) into sound waves.",
+				"Category": "Editor",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "FacialAnimation",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "FacialAnimationEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PreDefault"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Enterprise/DatasmithContent/DatasmithContent.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Datasmith Content",
+				"Description": "Content for Datasmith Importer.",
+				"Category": "Unreal Studio",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "https://docs.unrealengine.com/en-US/Studio/Datasmith",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": true,
+				"Modules": [
+					{
+						"Name": "DatasmithContent",
+						"Type": "Runtime",
+						"LoadingPhase": "PostConfigInit"
+					},
+					{
+						"Name": "DatasmithContentEditor",
+						"Type": "Editor",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Enterprise/VariantManagerContent/VariantManagerContent.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Variant Manager Content",
+				"Description": "Data classes and assets for the Variant Manager enterprise plugin",
+				"Category": "Unreal Studio",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "https://docs.unrealengine.com/en-US/Studio/Datasmith",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "VariantManagerContent",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Experimental/AlembicImporter/AlembicImporter.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "0.1",
+				"FriendlyName": "Alembic Importer (Experimental)",
+				"Description": "Support importing Alembic files",
+				"Category": "Importers",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "AlembicImporter",
+						"Type": "Editor",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Mac",
+							"Linux"
+						]
+					},
+					{
+						"Name": "AlembicLibrary",
+						"Type": "Editor",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Mac",
+							"Linux"
+						]
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "GeometryCache",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Experimental/GeometryCache/GeometryCache.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "0.1",
+				"FriendlyName": "Geometry Cache (Experimental)",
+				"Description": "Support for distilled Geometry animations",
+				"Category": "Importers",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "GeometryCacheEd",
+						"Type": "Editor",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Win64"
+						]
+					},
+					{
+						"Name": "GeometryCacheSequencer",
+						"Type": "Editor",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Win64"
+						]
+					},
+					{
+						"Name": "GeometryCache",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "GeometryCacheTracks",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Experimental/AppleImageUtils/AppleImageUtils.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Apple Image Utils",
+				"Description": "Utilities that operate on CIImage, CVPixelBuffer, IOSurface, etc.",
+				"Category": "Experimental",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "AppleImageUtils",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"BlacklistPlatforms": [
+							"TVOS"
+						]
+					},
+					{
+						"Name": "AppleImageUtilsBlueprintSupport",
+						"Type": "Developer",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Mac",
+							"Linux"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Experimental/AppleVision/AppleVision.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Apple Vision API",
+				"Description": "Allows you to issue computer vision api calls for textures (camera data or render targets)",
+				"Category": "Experimental",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "AppleVision",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "AppleVisionBlueprintSupport",
+						"Type": "Developer",
+						"LoadingPhase": "Default"
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "AppleImageUtils",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Experimental/BackChannel/BackChannel.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1",
+				"FriendlyName": "BackChannel",
+				"Description": "BackChannel is an experimetal plugin that allows external tools and apps to query for and push data into a running Unreal session.",
+				"Category": "Experimental",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "BackChannel",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "Default",
+						"BlacklistPlatforms": [
+							"HTML5"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Experimental/CharacterAI/CharacterAI.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "0.1",
+				"FriendlyName": "CharacterAI",
+				"Description": "Adds code and assets related to implementing AI in a character-based project.",
+				"Category": "Gameplay",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "CharacterAI",
+						"Type": "Runtime",
+						"LoadingPhase": "PostEngineInit"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Experimental/HTML5Networking/HTML5Networking.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Experimental HTML5 Networking Plugin",
+				"Description": "HTML5 Networking",
+				"Category": "Misc",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "HTML5Networking",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Mac",
+							"Win32",
+							"Win64",
+							"HTML5"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Media/AvfMedia/AvfMedia.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 2,
+				"VersionName": "2.0",
+				"FriendlyName": "AVF Media Player",
+				"Description": "Implements a media player using Apple AV Foundation.",
+				"Category": "Media Players",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "https://forums.unrealengine.com/showthread.php?46879-Media-Framework-Documentation-for-4-5-Preview",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "AvfMedia",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "PreLoadingScreen",
+						"WhitelistPlatforms": [
+							"IOS",
+							"Mac",
+							"TVOS"
+						]
+					},
+					{
+						"Name": "AvfMediaEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "AvfMediaFactory",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "AvfMediaFactory",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "PostEngineInit",
+						"WhitelistPlatforms": [
+							"IOS",
+							"Linux",
+							"Mac",
+							"TVOS",
+							"Win32",
+							"Win64"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Media/ImgMedia/ImgMedia.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Image Sequence Media Player",
+				"Description": "Implements a media player for image sequences in DPX, EXR, and other formats.",
+				"Category": "Media Players",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "https://forums.unrealengine.com/showthread.php?46879-Media-Framework-Documentation-for-4-5-Preview",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "ImgMedia",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "ImgMediaEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "ImgMediaFactory",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "ImgMediaFactory",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "OpenExrWrapper",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "PostEngineInit",
+						"WhitelistPlatforms": [
+							"Mac",
+							"Win32",
+							"Win64"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Media/LinearTimecode/LinearTimecode.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Linear Timecode Reader",
+				"Description": "Read Linear Timecode from an audio source.",
+				"Category": "Media Players",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "LinearTimecode",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Media/MediaCompositing/MediaCompositing.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Media Compositing",
+				"Description": "Actors, components and Sequencer extensions for compositing media",
+				"Category": "Rendering",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": true,
+				"Modules": [
+					{
+						"Name": "MediaCompositing",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "MediaCompositingEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "ImgMedia",
+						"Enabled": true,
+						"WhitelistTargets": [
+							"Editor"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Media/WmfMedia/WmfMedia.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 2,
+				"VersionName": "2.0",
+				"FriendlyName": "WMF Media Player",
+				"Description": "Implements a media player using the Windows Media Foundation framework.",
+				"Category": "Media Players",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "https://forums.unrealengine.com/showthread.php?46879-Media-Framework-Documentation-for-4-5-Preview",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "WmfMedia",
+						"Type": "Runtime",
+						"LoadingPhase": "PostConfigInit",
+						"WhitelistPlatforms": [
+							"Win32",
+							"Win64"
+						]
+					},
+					{
+						"Name": "WmfMediaEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "WmfMediaFactory",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "WmfMediaFactory",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "PostEngineInit",
+						"WhitelistPlatforms": [
+							"Mac",
+							"Linux",
+							"Win32",
+							"Win64"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Messaging/TcpMessaging/TcpMessaging.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "TCP Messaging",
+				"Description": "Adds a TCP connection based transport layer to the messaging sub-system for sending and receiving messages between networked computers and devices.",
+				"Category": "Messaging",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"SupportedPrograms": [
+					"UnrealFrontend"
+				],
+				"Modules": [
+					{
+						"Name": "TcpMessaging",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault",
+						"BlacklistPlatforms": [
+							"HTML5"
+						],
+						"WhitelistPrograms": [
+							"UnrealFrontend"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Messaging/UdpMessaging/UdpMessaging.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "UDP Messaging",
+				"Description": "Adds a UDP based transport and tunneling layer to the messaging sub-system for sending and receiving messages between networked computers and devices.",
+				"Category": "Messaging",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"SupportedPrograms": [
+					"UnrealFrontend",
+					"UnrealMultiUserServer",
+					"UnrealLightmass"
+				],
+				"Modules": [
+					{
+						"Name": "UdpMessaging",
+						"Type": "RuntimeAndProgram",
+						"LoadingPhase": "PreDefault",
+						"BlacklistPlatforms": [
+							"HTML5"
+						],
+						"WhitelistPrograms": [
+							"UnrealFrontend",
+							"UnrealMultiUserServer",
+							"UnrealLightmass"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/NetcodeUnitTest/NetcodeUnitTest/NetcodeUnitTest.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Netcode Unit Test",
+				"Description": "A unit testing framework for testing the UE4 netcode, primarily for bugs and exploits",
+				"Category": "Networking",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "NetcodeUnitTest",
+						"Type": "Developer",
+						"LoadingPhase": "Default",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Win32",
+							"Linux"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Online/OnlineSubsystemNull/OnlineSubsystemNull.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Online Subsystem NULL",
+				"Description": "Access to NULL platform",
+				"Category": "Online Platform",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "OnlineSubsystemNull",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					}
+				],
+				"Plugins": [
+					{
+						"Name": "OnlineSubsystem",
+						"Enabled": true
+					},
+					{
+						"Name": "OnlineSubsystemUtils",
+						"Enabled": true
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Portal/LauncherChunkInstaller/LauncherChunkInstaller.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Launcher Chunk Installer",
+				"Description": "Chunk installer module that hooks into launcher",
+				"Category": "Launcher",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "LauncherChunkInstaller",
+						"Type": "Runtime",
+						"LoadingPhase": "PostConfigInit",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Win32",
+							"Linux",
+							"Mac"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/AndroidPermission/AndroidPermission.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "0.1",
+				"FriendlyName": "Android Runtime Permission",
+				"Description": "Support for Android Runtime Permission",
+				"Category": "Android",
+				"CreatedBy": "Google",
+				"CreatedByURL": "http://developers.google.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "AndroidPermission",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/ArchVisCharacter/ArchVisCharacter.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "ArchVis Character",
+				"Description": "A controllable character tuned for architectural applications",
+				"Category": "Gameplay",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "ArchVisCharacter",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/AudioCapture/AudioCapture.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Audio Capture",
+				"Description": "Plugin provides an interface for microphone input capture.",
+				"Category": "Audio",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "AudioCapture",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					},
+					{
+						"Name": "AudioCaptureEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit",
+						"WhitelistPlatforms": [
+							"Win64"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/CableComponent/CableComponent.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Cable Component",
+				"Description": "A simulated cable component.",
+				"Category": "Rendering",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "CableComponent",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/CustomMeshComponent/CustomMeshComponent.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Custom Mesh Component",
+				"Description": "A new renderable Component class that allows you to specify custom geometry via C++ or Blueprint.",
+				"Category": "Rendering",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "CustomMeshComponent",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"BlacklistPlatforms": [
+							"HTML5"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/EditableMesh/EditableMesh.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Editable Mesh",
+				"Description": "A mesh with rich runtime editing features",
+				"Category": "Rendering",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "EditableMesh",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/ExampleDeviceProfileSelector/ExampleDeviceProfileSelector.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Example Device Profile Selector",
+				"Description": "Example Device Profile Selector used show selection of device profiles on hardware",
+				"Category": "Device Profile Selectors",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "ExampleDeviceProfileSelector",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "PostConfigInit"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/LocationServicesBPLibrary/LocationServicesBPLibrary.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Mobile Location Services Blueprints Library",
+				"Description": "Common interface for blueprint access for location data from mobile devices",
+				"Category": "Blueprints",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "LocationServicesBPLibrary",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/MobilePatchingUtils/MobilePatchingUtils.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Mobile Patching Utilities",
+				"Description": "Blueprint exposed functionality for downloading and patching content on mobile platforms",
+				"Category": "Mobile",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "MobilePatchingUtils",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/PhysXVehicles/PhysXVehicles.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "PhysX Vehicles",
+				"Description": "PhysX Vehicle Integration",
+				"Category": "Physics",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "PhysXVehicles",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					},
+					{
+						"Name": "PhysXVehiclesEditor",
+						"Type": "Developer",
+						"LoadingPhase": "PreDefault"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/ProceduralMeshComponent/ProceduralMeshComponent.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Procedural Mesh Component",
+				"Description": "A renderable component and library of utilities for creating and modifying mesh geometry procedurally.",
+				"Category": "Rendering",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "ProceduralMeshComponent",
+						"Type": "Runtime",
+						"LoadingPhase": "Default",
+						"BlacklistPlatforms": [
+							"HTML5"
+						]
+					},
+					{
+						"Name": "ProceduralMeshComponentEditor",
+						"Type": "Editor",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/RuntimePhysXCooking/RuntimePhysXCooking.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Runtime PhysX Cooking",
+				"Description": "Runtime cooking of physics data (convex hulls, heightfields, etc...)",
+				"Category": "Physics",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "RuntimePhysXCooking",
+						"Type": "Runtime",
+						"LoadingPhase": "PreDefault"
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Media/WebMMedia/WebMMedia.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "WebM Video Player",
+				"Description": "",
+				"Category": "Media Players",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "WebMMedia",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "PostEngineInit",
+						"BlacklistPlatforms": [
+							"Win32",
+							"XboxOne",
+							"PS4",
+							"IOS",
+							"Android",
+							"HTML5",
+							"TVOS",
+							"Switch",
+							"Lumin"
+						],
+						"BlacklistTargets": [
+							"Server"
+						]
+					},
+					{
+						"Name": "WebMMediaEditor",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "WebMMediaFactory",
+						"Type": "Editor",
+						"LoadingPhase": "PostEngineInit"
+					},
+					{
+						"Name": "WebMMediaFactory",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "PostEngineInit",
+						"BlacklistPlatforms": [
+							"Win32",
+							"Mac",
+							"XboxOne",
+							"PS4",
+							"IOS",
+							"Android",
+							"HTML5",
+							"TVOS",
+							"Switch",
+							"Lumin"
+						],
+						"BlacklistTargets": [
+							"Server"
+						]
+					}
+				]
+			}
+		},
+		{
+			"File": "../../../Engine/Plugins/Runtime/WindowsMoviePlayer/WindowsMoviePlayer.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 1,
+				"VersionName": "1.0",
+				"FriendlyName": "Windows Movie Player",
+				"Description": "Windows Specific Movie Player using Media Foundation",
+				"Category": "Movie Players",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "http://epicgames.com",
+				"DocsURL": "",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": true,
+				"CanContainContent": false,
+				"Modules": [
+					{
+						"Name": "WindowsMoviePlayer",
+						"Type": "RuntimeNoCommandlet",
+						"LoadingPhase": "PreLoadingScreen",
+						"WhitelistPlatforms": [
+							"Win64",
+							"Win32"
+						]
+					}
+				]
+			}
+		}
+	]
+}

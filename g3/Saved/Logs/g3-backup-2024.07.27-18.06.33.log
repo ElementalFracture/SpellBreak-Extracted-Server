@@ -1,0 +1,150 @@
+﻿Log file open, 07/27/24 19:05:45
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogConsoleResponse: Display: Failed to find resolution value strings in scalability ini. Falling back to default.
+LogInit: Display: Running engine for game: g3
+LogPakFile: Registered encryption key '00000000000000000000000000000000': 0 pak files mounted, 0 remain pending
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 20 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.344347
+LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+LogICUInternationalization: ICU TimeZone Detection - Raw Offset: +0:00, Platform Override: ''
+LogPluginManager: Display: Disabled plugin 'OnlineSubsystemPS4', continuing.
+LogPluginManager: Display: Disabled plugin 'OnlineSubsystemSwitch', continuing.
+LogPluginManager: Display: Disabled plugin 'OnlineSubsystemLive', continuing.
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin UnrealHx
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin MinimapPlugin
+LogPluginManager: Mounting plugin PrefabTool
+LogPluginManager: Mounting plugin MirrorAnimationSystem
+LogPluginManager: Mounting plugin ApexDestruction
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin OnlineFramework
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin OnlineSubsystemSteam
+LogPluginManager: Mounting plugin FixItNotePlugin
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin PlatformCrypto
+LogPluginManager: Mounting plugin AESHandlerComponent
+LogPluginManager: Mounting plugin PythonScriptPlugin
+LogPluginManager: Mounting plugin Niagara
+LogPluginManager: Mounting plugin EditorScriptingUtilities
+LogPluginManager: Mounting plugin ST_SparseGrid
+LogPluginManager: Mounting plugin ControlRig
+LogPluginManager: Mounting plugin LiveLink
+LogPluginManager: Mounting plugin Takes
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin Wwise
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin OnlineSubsystemEOS
+LogPluginManager: Mounting plugin DisbeliefOnline
+LogPluginManager: Mounting plugin MfMedia
+LogPluginManager: Mounting plugin AnimationBudgetAllocator
+LogPluginManager: Mounting plugin AwsSdkMini
+LogPluginManager: Mounting plugin ImpostorBaker
+LogPluginManager: Mounting plugin BlueprintMaterialTextureNodes
+LogPluginManager: Mounting plugin ProletariatOnline
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin AnimationSharing
+LogPluginManager: Mounting plugin SignificanceManager
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin VariantManagerContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleVision
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin HTML5Networking
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin LinearTimecode
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin NetcodeUnitTest
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogInit: Warning: Incompatible or missing module: g3
+LogInit: Warning: Incompatible or missing module: g3Editor
+LogInit: Warning: Incompatible or missing module: MinimapPlugin
+LogInit: Warning: Incompatible or missing module: PrefabAsset
+LogInit: Warning: Incompatible or missing module: PrefabAssetEditor
+LogInit: Warning: Incompatible or missing module: MirrorAnimationSystem
+LogInit: Warning: Incompatible or missing module: MirrorAnimationSystemEditor
+LogInit: Warning: Incompatible or missing module: FixItNotePlugin
+LogInit: Warning: Incompatible or missing module: ST_SparseGrid
+LogInit: Warning: Incompatible or missing module: ST_SparseGridEditor
+LogInit: Warning: Incompatible or missing module: AkAudio
+LogInit: Warning: Incompatible or missing module: AudiokineticTools
+LogInit: Warning: Incompatible or missing module: OnlineSubsystemEOS
+LogInit: Warning: Incompatible or missing module: DisbeliefOnline
+LogInit: Warning: Incompatible or missing module: AwsSdkMini
+LogInit: Warning: Incompatible or missing module: ProletariatOnline
+Running D:/UE_4.22/Engine/Binaries/DotNET/UnrealBuildTool.exe Development Win64 -Project="D:/Projects/SpellBreak/extracted_server/g3/g3.uproject" -TargetType=Editor -Progress -NoHotReloadFromIDE
+Creating makefile for UE4Editor (no existing makefile)
+ERROR: Unable to find plugin 'UnrealHx' (referenced via g3.uproject). Install it and try again, or remove it from the required plugin list.
+LogInit: Warning: Still incompatible or missing module: g3
+LogInit: Warning: Still incompatible or missing module: g3Editor
+LogInit: Warning: Still incompatible or missing module: MinimapPlugin
+LogInit: Warning: Still incompatible or missing module: PrefabAsset
+LogInit: Warning: Still incompatible or missing module: PrefabAssetEditor
+LogInit: Warning: Still incompatible or missing module: MirrorAnimationSystem
+LogInit: Warning: Still incompatible or missing module: MirrorAnimationSystemEditor
+LogInit: Warning: Still incompatible or missing module: FixItNotePlugin
+LogInit: Warning: Still incompatible or missing module: ST_SparseGrid
+LogInit: Warning: Still incompatible or missing module: ST_SparseGridEditor
+LogInit: Warning: Still incompatible or missing module: AkAudio
+LogInit: Warning: Still incompatible or missing module: AudiokineticTools
+LogInit: Warning: Still incompatible or missing module: OnlineSubsystemEOS
+LogInit: Warning: Still incompatible or missing module: DisbeliefOnline
+LogInit: Warning: Still incompatible or missing module: AwsSdkMini
+LogInit: Warning: Still incompatible or missing module: ProletariatOnline
+LogExit: Preparing to exit.
+LogModuleManager: Shutting down and abandoning module DesktopPlatform (40)
+LogModuleManager: Shutting down and abandoning module AnimationModifiers (38)
+LogModuleManager: Shutting down and abandoning module PropertyEditor (37)
+LogModuleManager: Shutting down and abandoning module AudioEditor (34)
+LogModuleManager: Shutting down and abandoning module TextureCompressor (32)
+LogModuleManager: Shutting down and abandoning module RenderCore (30)
+LogModuleManager: Shutting down and abandoning module Landscape (28)
+LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (26)
+LogModuleManager: Shutting down and abandoning module OpenGLDrv (24)
+LogModuleManager: Shutting down and abandoning module D3D11RHI (22)
+LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (20)
+LogModuleManager: Shutting down and abandoning module Renderer (18)
+LogModuleManager: Shutting down and abandoning module Engine (16)
+LogModuleManager: Shutting down and abandoning module CoreUObject (14)
+LogModuleManager: Shutting down and abandoning module NetworkFile (12)
+LogModuleManager: Shutting down and abandoning module CookedIterativeFile (10)
+LogModuleManager: Shutting down and abandoning module StreamingFile (8)
+LogModuleManager: Shutting down and abandoning module SandboxFile (6)
+LogModuleManager: Shutting down and abandoning module PakFile (4)
+LogModuleManager: Shutting down and abandoning module RSA (3)
+LogExit: Exiting.
+Log file closed, 07/27/24 19:06:33

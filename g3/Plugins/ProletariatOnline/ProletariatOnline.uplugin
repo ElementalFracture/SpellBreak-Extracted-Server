@@ -1,0 +1,29 @@
+{
+    "FileVersion": 3,
+    "Version": 1,
+    "VersionName": "1.0",
+    "FriendlyName": "ProletariatOnline",
+    "Description": "Plugin providing common online functionality, like authentication with an application server.",
+    "Category": "Other",
+    "CreatedBy": "Proletariat Inc.",
+    "CreatedByURL": "https://www.proletariat.com/",
+    "DocsURL": "",
+    "MarketplaceURL": "",
+    "SupportURL": "",
+    "CanContainContent": false,
+    "IsBetaVersion": false,
+    "Installed": false,
+    "Modules": [
+        {
+            "Name": "ProletariatOnline",
+            "Type": "Runtime",
+            "LoadingPhase": "Default"
+        }
+    ],
+    "Plugins": [
+        {
+            "Name": "OnlineSubsystemUtils",
+            "Enabled": true
+        }
+    ]
+}
