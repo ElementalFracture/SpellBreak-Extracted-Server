@@ -1,0 +1,87 @@
+#!/bin/sh
+
+# Define the size threshold for large files (e.g., 50MB)
+SIZE_THRESHOLD=$((100 * 1024 * 1024))
+TRACKER_FILE="large_files.tracker"
+
+# Function to split large files
+split_large_file() {
+    local file=$1
+    local base_name=$(basename "$file")
+    local dir_name=$(dirname "$file")
+    local parts_dir="$dir_name/${base_name}_parts"
+
+    echo "Splitting file: $file"
+
+    # Create the parts directory if it doesn't exist
+    if [ ! -d "$parts_dir" ]; then
+        mkdir -p "$parts_dir"
+    fi
+
+    split -b $SIZE_THRESHOLD "$file" "$parts_dir/${base_name}_part_"
+
+    if [ $? -eq 0 ]; then
+        git rm --cached "$file"
+        git add "$parts_dir/${base_name}_part_"*
+
+        # Check if the parts directory is already in the tracker file
+        if ! grep -q "$parts_dir" "$TRACKER_FILE"; then
+            echo "$parts_dir" >>"$TRACKER_FILE"
+            git add "$TRACKER_FILE"
+        fi
+
+        echo "Finished splitting file: $file"
+    else
+        echo "Error splitting file: $file"
+    fi
+}
+
+# Create temp file to store valid directories
+TEMP_TRACKER_FILE=$(mktemp)
+
+# Check if the files in tracker file still exist
+if [ -f "$TRACKER_FILE" ]; then
+    while IFS= read -r parts_dir; do
+        base_file="${parts_file%_parts*}" # Extract the base file name by removing the _parts suffix
+
+        # Update the tracker file with valid directories
+        if [ -f "$base_file" ]; then
+            echo "$parts_dir" >>"$TEMP_TRACKER_FILE"
+        fi
+    done <"$TRACKER_FILE"
+fi
+
+# Replace the old tracker file with the updated one
+mv "$TEMP_TRACKER_FILE" "$TRACKER_FILE"
+
+# Ensure Git tracks changes in the split parts directories
+if [ -f "$TRACKER_FILE" ]; then
+    # Remove the "assume unchanged" flag for all files
+    git ls-files -v | grep '^h' | cut -c3- | while read -r file; do
+        git update-index --no-assume-unchanged "$file"
+    done
+
+    # Stage all changes, including deletions
+    git add -u
+    echo "Added all changes from currently tracked files to the index"
+fi
+
+# Get the list of files that are staged for commit with their status
+staged_files=$(git diff --cached --name-status)
+
+# Print all staged files and their current status
+echo "Staged files and their status:"
+echo "$staged_files"
+
+# Loop through each staged file
+echo "$staged_files" | while read status file; do
+    if { [ "$status" = "A" ] || [ "$status" = "M" ] || [ "$status" = "R" ]; } && [ -f "$file" ]; then
+        # Check if the file size is greater than the threshold
+        file_size=$(stat -c%s "$file")
+
+        if [ $file_size -gt $SIZE_THRESHOLD ]; then
+            # Split the large file into smaller chunks
+            split_large_file "$file"
+        fi
+    fi
+done

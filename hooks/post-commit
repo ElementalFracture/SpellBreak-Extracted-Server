@@ -1,0 +1,15 @@
+#!/bin/sh
+
+TRACKER_FILE="large_files.tracker"
+
+# Mark all directories listed in the tracker file as assume-unchanged and then delete them
+if [ -f "$TRACKER_FILE" ]; then
+    while IFS= read -r parts_dir; do
+        if [ -d "$parts_dir" ]; then
+            find "$parts_dir" -type f -exec git update-index --assume-unchanged {} \;
+            echo "Marked $parts_dir as assume-unchanged"
+            rm -rf "$parts_dir"
+            echo "Deleted directory: $parts_dir"
+        fi
+    done <"$TRACKER_FILE"
+fi

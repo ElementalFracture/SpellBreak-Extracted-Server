@@ -1,0 +1,38 @@
+#!/bin/sh
+TRACKER_FILE="large_files.tracker"
+
+# Function to reassemble split files
+reassemble_file() {
+    local parts_dir=$1
+    local base_name=$(basename "$parts_dir" "_parts")
+    local dir_name=$(dirname "$parts_dir")
+    local output_file="$dir_name/$base_name"
+    echo "Reassembling $output_file from parts in $parts_dir..."
+    cat "$parts_dir/${base_name}_part_"* >"$output_file"
+    if [ $? -eq 0 ]; then
+        find "$parts_dir" -type f -exec git update-index --assume-unchanged {} \;
+        rm "$parts_dir/${base_name}_part_"*
+        rmdir "$parts_dir"
+        echo "$output_file reassembled successfully."
+    else
+        echo "Error reassembling $output_file."
+    fi
+}
+
+# Print the current working directory
+echo "Current working directory: $(pwd)"
+
+# Check if the tracker file exists
+if [ -f "$TRACKER_FILE" ]; then
+    # Read each line from the tracker file and reassemble the corresponding files
+    while IFS= read -r parts_dir; do
+        absolute_parts_dir=$(realpath "$parts_dir")
+        if [ -d "$absolute_parts_dir" ]; then
+            reassemble_file "$absolute_parts_dir"
+        else
+            echo "Directory $absolute_parts_dir not found."
+        fi
+    done <"$TRACKER_FILE"
+else
+    echo "Tracker file $TRACKER_FILE not found."
+fi
