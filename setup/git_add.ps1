@@ -1,3 +1,9 @@
+# Get the directory of the script
+$scriptDir = Split-Path -Parent $PSScriptRoot
+
+# Change to the parent directory of the script
+Set-Location $scriptDir
+
 # Define the directory containing the files
 $directory = Get-Location
 
