@@ -1,7 +1,12 @@
 @echo off
 setlocal
 
-set "TRACKER_FILE=large_files.tracker"
+REM Define the script's directory and its parent directory
+set "SCRIPT_DIR=%~dp0"
+set "PARENT_DIR=%SCRIPT_DIR%.."
+
+REM Define the tracker file relative to the parent directory
+set "TRACKER_FILE=%PARENT_DIR%\large_files.tracker"
 
 REM Check if the tracker file exists
 if exist "%TRACKER_FILE%" (

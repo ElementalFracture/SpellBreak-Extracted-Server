@@ -1,9 +1,13 @@
 @echo off
 setlocal
 
-REM Define source and destination directories
-set "SOURCE_DIR=hooks"
-set "DEST_DIR=.git\hooks"
+REM Define the script's directory and its parent directory
+set "SCRIPT_DIR=%~dp0"
+set "PARENT_DIR=%SCRIPT_DIR%.."
+
+REM Define source and destination directories relative to the parent directory
+set "SOURCE_DIR=%PARENT_DIR%\setup\hooks"
+set "DEST_DIR=%PARENT_DIR%\.git\hooks"
 
 REM Check if the source directory exists
 if not exist "%SOURCE_DIR%" (
