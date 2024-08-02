@@ -1,8 +1,12 @@
 @echo off
 setlocal
 
-REM Define the script's directory and its parent directory
+rem Get the directory of the currently running script
 set "SCRIPT_DIR=%~dp0"
+
+REM Change to the parent directory of the script
+cd /d %SCRIPT_DIR%..
+
 set "PARENT_DIR=%SCRIPT_DIR%.."
 
 REM Define the tracker file relative to the parent directory
